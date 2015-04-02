@@ -1,8 +1,13 @@
 package main;
 
+import java.util.*;
+import chap4.*;
+
 public class Program {
 	public static void main(String[] args) {
-		System.out.println("jerry");
-	}
 
+		
+		Chapter chap = new Chap42();
+		chap.run();
+	}
 }
