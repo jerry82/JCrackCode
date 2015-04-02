@@ -1,5 +1,6 @@
 package util;
 
+
 import data.treegraph.*;
 
 
@@ -22,5 +23,26 @@ public class DataFeeder {
 		graph.addDirectedNode("A", "E", 1);
 		
 		return graph;
+	}
+	
+	//data: 8>5>9; 8>4>11>3;  5>7>1; 7>12>2
+	public BTree getUnbalancedTree() {
+		BTree tree = new BTree();
+		
+        tree.setRoot(new BNode(8));
+
+        tree.getRoot().setLeft(new BNode(5));
+        
+        tree.getRoot().getLeft().setLeft(new BNode(9));
+        tree.getRoot().getLeft().setRight(new BNode(7));
+        tree.getRoot().getLeft().getRight().setLeft(new BNode(1));
+        tree.getRoot().getLeft().getRight().setRight(new BNode(12));
+        tree.getRoot().getLeft().getRight().getRight().setLeft(new BNode(2));
+
+        tree.getRoot().setRight(new BNode(4));
+        tree.getRoot().getRight().setRight(new BNode(11));
+        tree.getRoot().getRight().getRight().setLeft(new BNode(3));
+		
+		return tree;
 	}
 }

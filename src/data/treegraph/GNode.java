@@ -39,5 +39,4 @@ public class GNode {
 	public GNode(String name) {
 		this.name = name;
 	}
-	
 }

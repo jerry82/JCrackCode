@@ -10,7 +10,7 @@ import data.treegraph.*;
  * solve exercise 4.1:
  * find if there's route between 2 nodes.
  */
-public class Chap42 extends Chapter{
+public class Chap42 extends Chapter {
 	
 	/*
 	 * main running method
@@ -47,7 +47,7 @@ public class Chap42 extends Chapter{
 		while (queue.size() > 0) {
 			GNode cur = queue.poll();
 			
-			//makr current node as visited
+			//mark current node as visited
 			cur.setVisited(true);
 			
 			HashMap<String, Integer> nbs = cur.getNeighbors();
