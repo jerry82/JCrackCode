@@ -1,0 +1,54 @@
+package data.treegraph;
+
+/*
+ * implementation of Binary Search Tree
+ */
+public class BSTree extends BTree {
+	
+	/*
+	 * add new node
+	 */
+	public void add(BNode node) {
+		
+		if (this.getRoot() == null) {
+			this.setRoot(node);
+		}
+		
+		//traverse 
+		BNode cur = this.getRoot();
+		int nodeVal = node.getData();
+		
+		while (cur != null) {
+			if (nodeVal < cur.getData()) {
+				if (cur.getLeft() == null) {
+					cur.setLeft(node);
+					break;
+				}
+				
+				//node is there
+				if (cur.getLeft().getData() == nodeVal) {
+					break;
+				}
+				
+				cur = cur.getLeft();
+			}
+			else if (nodeVal > cur.getData()) {
+				if (cur.getRight() == null) {
+					cur.setRight(node);
+					break;
+				}
+				
+				//node is there
+				if (cur.getRight().getData() == nodeVal) {
+					break;
+				}
+				
+				cur = cur.getRight();
+			}
+			//node is there
+			else {
+				break;
+			}
+		}
+	}
+}
