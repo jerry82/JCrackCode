@@ -53,7 +53,6 @@ public class DataFeeder {
 		int[] array = new int[] { 2, 4, 7, 3, 1, 9, 5, 6, 8};
 		for (int i : array) {
 			BNode node = new BNode(i);
-			
 			bst.add(node);
 		}
 		return bst;
