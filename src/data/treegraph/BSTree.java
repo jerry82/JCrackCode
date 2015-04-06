@@ -22,6 +22,7 @@ public class BSTree extends BTree {
 			if (nodeVal < cur.getData()) {
 				if (cur.getLeft() == null) {
 					cur.setLeft(node);
+					node.setParent(cur);
 					break;
 				}
 				
@@ -35,6 +36,7 @@ public class BSTree extends BTree {
 			else if (nodeVal > cur.getData()) {
 				if (cur.getRight() == null) {
 					cur.setRight(node);
+					node.setParent(cur);
 					break;
 				}
 				
@@ -42,7 +44,6 @@ public class BSTree extends BTree {
 				if (cur.getRight().getData() == nodeVal) {
 					break;
 				}
-				
 				cur = cur.getRight();
 			}
 			//node is there

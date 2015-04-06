@@ -28,7 +28,16 @@ public class BNode {
 		this.data = data;
 	}
 	
+	public BNode getParent() {
+		return parent;
+	}
+	
+	public void setParent(BNode parent) {
+		this.parent = parent;
+	}
+	
 	private int data;
 	private BNode left;
 	private BNode right;
+	private BNode parent;
 }
