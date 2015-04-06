@@ -8,8 +8,7 @@ import main.Chapter;
 
 /*
  * solve Chapter 4.4: implement d linked list for BST with depth d
- * implement a BFS and mark the end point of child, 
- * change the endpoint to the last child of previous last child
+ * implements a BFS, iterates through each level index to get new list 
  */
 public class Chap44 extends Chapter {
 
@@ -24,45 +23,48 @@ public class Chap44 extends Chapter {
 		
 		List<LinkedList<BNode>> lists = new ArrayList<LinkedList<BNode>>();
 		
-		Queue<BNode> queue = new LinkedList<BNode>();
-		
 		BNode root = tree.getRoot();
-		BNode endNode = root;
-		BNode tip = root;
 		
-		queue.add(root);
-		LinkedList<BNode> tmpList = new LinkedList<BNode>();
+		if (root == null) 
+			return lists;
 		
-		while (queue.size() > 0) {
-			BNode cur = queue.poll();
-			 
-			BNode left = cur.getLeft();
-			BNode right = cur.getRight();
-			
-			if (left != null) {
-				tmpList.add(left);
-				queue.add(left);
-				tip = left;
-			}
-			if (right != null) {
-				tmpList.add(right);
-				queue.add(right);
-				tip = right;
-			}
-			
-			if (endNode.getData() == cur.getData()) {
-				lists.add(tmpList);
-				endNode = tip;
-				
-				System.out.println("add list >");				
-				for (BNode node : tmpList) {
-					System.out.format(" %d ", node.getData());
-				}
+		LinkedList<BNode> list = new LinkedList<BNode>();
+		int level = 0;
+		list.add(root);
+		lists.add(0, list);
+		showLL(list);
 
-				tmpList = new LinkedList<BNode>();
-				System.out.println();
+		while (true) {
+			
+			list = new LinkedList<BNode>();
+			
+			LinkedList<BNode> tmp = lists.get(level);
+
+			if (tmp.size() > 0) {
+				for (BNode node : tmp) {
+					BNode left = node.getLeft();
+					BNode right = node.getRight();
+					if (left != null)
+						list.add(left);
+					if (right != null) 
+						list.add(right);
+				}
+				lists.add(level + 1, list);
+				level++;
+				showLL(list);
+			}
+			else {
+				break;
 			}
 		}
+		
 		return lists;
+	}
+	
+	private void showLL(LinkedList<BNode> list) {
+		for (BNode node : list) {
+			System.out.format(" %d ", node.getData());
+		}
+		System.out.println();
 	}
 }
