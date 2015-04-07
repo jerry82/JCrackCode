@@ -6,6 +6,7 @@ import util.*;
 
 /*
  * solve Chapter 4.6: find common ancestor of 2 nodes
+ * binary tree (NOT BST) and don't use other data structure to store nodes !!! 
  * algo1: find if p, q on left or right:
  * if in left recursive to left node
  * if in right recursive to right node
@@ -30,7 +31,7 @@ public class Chap46 extends Chapter {
 			System.out.format(" %d %d > null \n", n1, n2);
 	}
 	
-	public BNode getCommon(int p, int q, BNode node) {
+	private BNode getCommon(int p, int q, BNode node) {
 		
 		if (find(node.getLeft(), q) && find(node.getLeft(), p)) {
 			return getCommon(p, q, node.getLeft());
@@ -42,7 +43,7 @@ public class Chap46 extends Chapter {
 			return node;
 	}
 	
-	public boolean find(BNode node, int value) {
+	private boolean find(BNode node, int value) {
 		boolean found = false; 
 		
 		if (node == null) {
@@ -59,5 +60,4 @@ public class Chap46 extends Chapter {
 		
 		return found; 
 	}
-	
 }

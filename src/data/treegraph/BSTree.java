@@ -52,4 +52,18 @@ public class BSTree extends BTree {
 			}
 		}
 	}
+	
+	public BNode getNode(BNode cur, int val) {
+		
+		if (cur == null) {
+			return null;
+		}
+		
+		if (val < cur.getData())
+			return getNode(cur.getLeft(), val);
+		else if (val > cur.getData()) 
+			return getNode(cur.getRight(), val);
+		else 
+			return cur;
+	}
 }
