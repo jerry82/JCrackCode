@@ -58,6 +58,18 @@ public class DataFeeder {
 		return bst;
 	}
 	
+	//data: 7 > 5 > 6; 7 > 9 > 8
+	public BSTree getBSTSample2() {
+		BSTree bst = new BSTree();
+		
+		int[] array = new int[] { 7, 5, 9, 6, 8};
+		for (int i : array) {
+			BNode node = new BNode(i);
+			bst.add(node);
+		}
+		return bst;
+	}
+	
 	//data:
 	public int[] getIncreasingSeq() {
 		int[] array = new int[] { 1, 3, 4, 5, 6, 7, 8, 9 };
