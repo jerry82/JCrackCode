@@ -39,6 +39,6 @@ public class JGraph {
 		
 		HashMap<String, Integer> neighbors = node1.getNeighbors();
 		if (!neighbors.containsKey(v2))
-			neighbors.put(v2, 1);
+			neighbors.put(v2, value);
 	}
 }

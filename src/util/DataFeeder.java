@@ -75,4 +75,29 @@ public class DataFeeder {
 		int[] array = new int[] { 1, 3, 4, 5, 6, 7, 8, 9 };
 		return array;
 	}
+	
+	//ab20 ag90 ad80, bf10, cf50 cd10 ch20, dc10, dg20, 
+	//eg30, eb50, fc10, fd40, ga20, 
+	public JGraph getDjikstraGraphSample1() {
+		JGraph graph = new JGraph();
+		
+		graph.addDirectedNode("A", "B", 20);
+		graph.addDirectedNode("A", "G", 90);
+		graph.addDirectedNode("A", "D", 80);
+		graph.addDirectedNode("B", "F", 10);
+		graph.addDirectedNode("C", "F", 50);
+		
+		graph.addDirectedNode("C", "D", 10);
+		graph.addDirectedNode("C", "H", 20);
+		graph.addDirectedNode("D", "C", 10);
+		graph.addDirectedNode("D", "G", 20);
+		graph.addDirectedNode("E", "G", 30);
+		
+		graph.addDirectedNode("E", "B", 50);
+		graph.addDirectedNode("F", "C", 10);
+		graph.addDirectedNode("F", "D", 40);
+		graph.addDirectedNode("G", "A", 20);
+		
+		return graph;
+	}
 }
