@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import java.util.*;
 
@@ -18,8 +18,7 @@ public class Chap42 extends Chapter {
 	 */
 	@Override
 	public void run() {
-		DataFeeder df = new DataFeeder();
-		JGraph graph = df.getSampleGraph1();
+		JGraph graph = DataFeeder.getSampleGraph1();
 		boolean foundPath = false;
 				
 		foundPath = dfs("F", "A", graph);;		

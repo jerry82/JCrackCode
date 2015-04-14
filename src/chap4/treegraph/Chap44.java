@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import java.util.*;
 
@@ -15,8 +15,7 @@ public class Chap44 extends Chapter {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		DataFeeder feed = new DataFeeder();
-		List<LinkedList<BNode>> result = createLL(feed.getBSTSample1());
+		List<LinkedList<BNode>> result = createLL(DataFeeder.getBSTSample1());
 	}
 	
 	public List<LinkedList<BNode>> createLL(BSTree tree) {

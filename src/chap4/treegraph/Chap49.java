@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import java.util.*;
 import data.treegraph.*;
@@ -14,8 +14,7 @@ public class Chap49 extends Chapter{
 
 	@Override
 	public void run() {
-		DataFeeder feed = new DataFeeder();
-		JGraph graph = feed.getDjikstraGraphSample1();
+		JGraph graph = DataFeeder.getDjikstraGraphSample1();
 		runDT(graph.getNodes().get("A"), graph);
 	}
 	

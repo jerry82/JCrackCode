@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import main.Chapter;
 import util.DataFeeder;
@@ -17,8 +17,7 @@ public class Chap41 extends Chapter {
 	 */
 	@Override
 	public void run() {
-		DataFeeder df = new DataFeeder();
-		BTree tree = df.getUnbalancedTree();
+		BTree tree = DataFeeder.getUnbalancedTree();
 		
 		tree.inOrder(tree.getRoot());
 		

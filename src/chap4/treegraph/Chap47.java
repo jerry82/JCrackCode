@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import util.DataFeeder;
 import main.Chapter;
@@ -15,9 +15,8 @@ public class Chap47 extends Chapter {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		DataFeeder feed = new DataFeeder();
-		BSTree tree1 = feed.getBSTSample1();
-		BSTree tree2 = feed.getBSTSample2();
+		BSTree tree1 = DataFeeder.getBSTSample1();
+		BSTree tree2 = DataFeeder.getBSTSample2();
 		
 		boolean result = checkSubtree(tree1, tree2);
 		String display = !result ? "NOT a subtree" : "INDEED a subtree";

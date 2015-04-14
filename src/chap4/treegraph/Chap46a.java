@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import util.DataFeeder;
 import main.Chapter;
@@ -15,10 +15,8 @@ public class Chap46a extends Chapter {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		DataFeeder feed = new DataFeeder();
-		
 		//data: 2 > 4 > 7 > 9 > 8; 7 > 5 > 6; 4 > 3; 2 > 1 ; 
-		BSTree tree = feed.getBSTSample1();
+		BSTree tree = DataFeeder.getBSTSample1();
 		
 		//assume p < q
 		int p = 1, q = 7;

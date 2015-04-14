@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import data.treegraph.*;
 import main.Chapter;
@@ -15,11 +15,10 @@ public class Chap45 extends Chapter {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		DataFeeder feed = new DataFeeder();
 		int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 		
 		for (int i : arr) {
-			BNode tmp = nextInOrder(feed.getBSTSample1(), i);
+			BNode tmp = nextInOrder(DataFeeder.getBSTSample1(), i);
 			
 			if (tmp != null)
 				System.out.format(" %d > %d \n", i, tmp.getData());

@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import data.treegraph.BNode;
 import data.treegraph.BSTree;
@@ -14,8 +14,7 @@ public class Chap43 extends Chapter {
 
 	@Override
 	public void run() {
-		DataFeeder feeder = new DataFeeder();
-		int[] data = feeder.getIncreasingSeq();
+		int[] data = DataFeeder.getIncreasingSeq();
 
 		BSTree bst = buildBST(data);
 		bst.inOrder(bst.getRoot());

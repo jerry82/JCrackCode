@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import java.util.LinkedList;
 

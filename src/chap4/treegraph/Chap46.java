@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import main.Chapter;
 import data.treegraph.*;
@@ -17,11 +17,10 @@ public class Chap46 extends Chapter {
 
 	@Override
 	public void run() {
+
 		// TODO Auto-generated method stub
-		DataFeeder feed = new DataFeeder();
-		
 		//data: 8>5>9; 8>4>11>3;  5>7>1; 7>12>2
-		BTree tree = feed.getUnbalancedTree();
+		BTree tree = DataFeeder.getUnbalancedTree();
 		
 		int n1 = 1, n2 = 3;
 		BNode parent = getCommon(n1, n2, tree.getRoot());

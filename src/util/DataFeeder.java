@@ -9,8 +9,12 @@ import data.treegraph.*;
  */
 public class DataFeeder {
 
+	private DataFeeder() {
+		
+	}
+	
 	//data: A > B > C > E > F; E > D > B; C > A; A > E
-	public JGraph getSampleGraph1() {
+	public static JGraph getSampleGraph1() {
 		JGraph graph = new JGraph();
 		
 		graph.addDirectedNode("A", "B", 1);
@@ -26,7 +30,7 @@ public class DataFeeder {
 	}
 	
 	//data: 8>5>9; 8>4>11>3;  5>7>1; 7>12>2
-	public BTree getUnbalancedTree() {
+	public static BTree getUnbalancedTree() {
 		BTree tree = new BTree();
 		
         tree.setRoot(new BNode(8));
@@ -47,7 +51,7 @@ public class DataFeeder {
 	}
 	
 	//data: 2 > 4 > 7 > 9 > 8; 7 > 5 > 6; 4 > 3; 2 > 1 ;   
-	public BSTree getBSTSample1() {
+	public static BSTree getBSTSample1() {
 		BSTree bst = new BSTree();
 		
 		int[] array = new int[] { 2, 4, 7, 3, 1, 9, 5, 6, 8};
@@ -59,7 +63,7 @@ public class DataFeeder {
 	}
 	
 	//data: 7 > 5 > 6; 7 > 9 > 8
-	public BSTree getBSTSample2() {
+	public static BSTree getBSTSample2() {
 		BSTree bst = new BSTree();
 		
 		int[] array = new int[] { 7, 5, 9, 6, 8};
@@ -71,14 +75,14 @@ public class DataFeeder {
 	}
 	
 	//data:
-	public int[] getIncreasingSeq() {
+	public static int[] getIncreasingSeq() {
 		int[] array = new int[] { 1, 3, 4, 5, 6, 7, 8, 9 };
 		return array;
 	}
 	
 	//ab20 ag90 ad80, bf10, cf50 cd10 ch20, dc10, dg20, 
 	//eg30, eb50, fc10, fd40, ga20, 
-	public JGraph getDjikstraGraphSample1() {
+	public static JGraph getDjikstraGraphSample1() {
 		JGraph graph = new JGraph();
 		
 		graph.addDirectedNode("A", "B", 20);
@@ -99,5 +103,13 @@ public class DataFeeder {
 		graph.addDirectedNode("G", "A", 20);
 		
 		return graph;
+	}
+	
+	public static int[] getUnsortedArray1() {
+		return new int[] { 5, 2, 6, 1 ,3, 2, 4, 4};
+	}
+	
+	public static int[] getUnsortedArray2() {
+		return new int[] { 170, 45, 75, 90, 802, 24, 2, 66 };
 	}
 }

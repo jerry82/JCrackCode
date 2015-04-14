@@ -1,4 +1,4 @@
-package chap4;
+package chap4.treegraph;
 
 import java.util.ArrayList;
 
@@ -17,8 +17,7 @@ public class Chap48 extends Chapter {
 	
 	@Override
 	public void run() {
-		DataFeeder feed = new DataFeeder();
-		BSTree tree = feed.getBSTSample1();
+		BSTree tree = DataFeeder.getBSTSample1();
 		
 		printPath(22, tree);
 	}
