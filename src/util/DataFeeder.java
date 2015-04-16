@@ -112,4 +112,13 @@ public class DataFeeder {
 	public static int[] getUnsortedArray2() {
 		return new int[] { 170, 45, 75, 90, 802, 24, 2, 66 };
 	}
+	
+	public static int[] getUnsortedArray3() {
+		return new int[] { 9, 179, 139, 38, 10, 5, 36 };
+	}
+	
+	public static float[] getUnsortedFloatArray1() {
+		float[] arr = new float[] {0.78f, 0.17f, 0.39f, 0.26f, 0.72f, 0.94f, 0.21f, 0.12f, 0.23f, 0.68f};
+		return arr;
+	}
 }

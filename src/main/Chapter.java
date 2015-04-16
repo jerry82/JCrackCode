@@ -14,4 +14,11 @@ public abstract class Chapter {
 		}
 		System.out.println();
 	}
+	
+	protected void showArr(float[] arr) {
+		for (float f : arr) {
+			System.out.format(" %f ", f);
+		}
+		System.out.println();
+	}
 }
