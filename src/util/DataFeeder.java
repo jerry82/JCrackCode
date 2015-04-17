@@ -121,4 +121,8 @@ public class DataFeeder {
 		float[] arr = new float[] {0.78f, 0.17f, 0.39f, 0.26f, 0.72f, 0.94f, 0.21f, 0.12f, 0.23f, 0.68f};
 		return arr;
 	}
+	
+	public static int[] getUnsortedArray4() {
+		return new int[] { 41, 67, 34, 0, 69, 24, 78, 58, 62, 64, 5, 45, 81, 27, 61}; 
+	}
 }
