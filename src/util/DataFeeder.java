@@ -125,4 +125,44 @@ public class DataFeeder {
 	public static int[] getUnsortedArray4() {
 		return new int[] { 41, 67, 34, 0, 69, 24, 78, 58, 62, 64, 5, 45, 81, 27, 61}; 
 	}
+	
+	public static String getUniqueCharacterString() {
+		return "abcabcdefg132~!@#$%^&*()_+";
+	}
+	
+	public static String getNotUniueCharacterString() {
+		return "abcd12398652a";
+	}
+	
+	public static String getAnaString1() {
+		return "1234567890";
+	}
+	
+	public static String getAnaString2() {
+		return "1456230987";
+	}
+	
+	public static String getAnaString3() {
+		return "123456789019";
+	}
+	
+	public static String getStringWithSpaces() {
+		return "@342 34 34    234 3423 4 234 342";
+	}
+	
+	public static int[][] get3x3Matrix() {
+		return new int[][] {{7, 8, 9}, {4, 5, 6}, {1, 2, 3}};
+	}
+	
+	public static int[][] get4x4Matrix() {
+		return new int[][] {{ 13, 14, 15, 16}, {9, 10, 11, 12}, {5, 6, 7, 8 }, {1, 2, 3, 4 } };
+	}
+	
+	public static String getRotatedString1() {
+		return "waterbottle";
+	}
+	
+	public static String getRotatedString2() {
+		return "erbottlewat";
+	}
 }

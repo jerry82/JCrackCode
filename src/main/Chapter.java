@@ -21,4 +21,16 @@ public abstract class Chapter {
 		}
 		System.out.println();
 	}
+	
+	protected void show(int[][] arr) {
+		int N = arr.length;
+		int M = arr[0].length;
+		
+		for (int i = N - 1; i >= 0; i--) {
+			for (int j = 0; j < M; j++) {
+				System.out.format(" %d ", arr[i][j]);
+			}
+			System.out.println();
+		}
+	}
 }
